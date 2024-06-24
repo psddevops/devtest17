@@ -1,0 +1,11 @@
+---
+ - name: This is for prompting variables
+   hosts: all
+   vars_prompt:
+     name: varl
+     prompt: Enter any value ?
+   tasks:
+     - name: This is used to print a variable value
+       debug:
+         msg: "The value of your variable is: {{ varl }}"
+         
